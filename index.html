@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+
+    <!-- Fuentes exactas de Google Fonts según tu Figma -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Kapakana&family=Sigmar+One&family=Silkscreen&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- REPRODUCTOR DE MÚSICA DE FONDO OCULTO -->
+    <audio id="bg-music" loop>
+        <source src="sunflower-spiderman.mp4" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <!-- PANTALLA 1: PIN Y POLAROID (Desktop - 1) -->
+    <section id="desktop-1" class="screen active red-bg">
+        <img src="araña Pantalla 1.png" class="spider-bg" alt="Araña de fondo">
+
+        <div class="screen1-container">
+            <div class="polaroid-wrapper">
+                <img src="imagen pantalla 1 EyL.jpg" alt="Foto Polaroid" class="polaroid-photo">
+            </div>
+
+            <div class="keypad-wrapper">
+                <p class="keypad-title">INTRODUCE LA CONTRASEÑA</p>
+                
+                <div class="pin-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <div class="keypad-grid">
+                    <button type="button" onclick="pressKey('1')">1</button>
+                    <button type="button" onclick="pressKey('2')">2</button>
+                    <button type="button" onclick="pressKey('3')">3</button>
+                    <button type="button" onclick="pressKey('4')">4</button>
+                    <button type="button" onclick="pressKey('5')">5</button>
+                    <button type="button" onclick="pressKey('6')">6</button>
+                    <button type="button" onclick="pressKey('7')">7</button>
+                    <button type="button" onclick="pressKey('8')">8</button>
+                    <button type="button" onclick="pressKey('9')">9</button>
+                    <button type="button" onclick="pressKey('.')">•</button>
+                    <button type="button" onclick="pressKey('0')">0</button>
+                    <button type="button" onclick="deleteKey()" class="delete-btn">⌫</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 2: SPIDERMAN PASTEL Y CARGA (Desktop - 2) -->
+    <section id="desktop-2" class="screen hidden cream-bg">
+        <img src="estrella spiderman.png" class="decor-star star-top-left" alt="Estrella">
+        <img src="spiderman de lado P2.png" class="spidey-top-right" alt="Spiderman de lado">
+
+        <div class="center-content">
+            <h2 class="title-hola">¡HOLA MI AMOR!</h2>
+            <img src="spiderman pastel.png" alt="Spiderman Pastel" class="spidey-cake">
+            <p class="loading-text">DESBLOQUEANDO RECUERDOS...</p>
+            
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <img src="estrella 2 spiderman.png" class="decor-star star-bottom-left" alt="Estrella 2">
+        <img src="corazon spiderman.png" class="pixel-heart" alt="Corazón pixel">
+    </section>
+
+    <!-- PANTALLA 3: FECHA 24/10/06 (Desktop - 3) -->
+    <section id="desktop-3" class="screen hidden red-bg">
+        <h1 class="date-text">24 / 10 / 06</h1>
+    </section>
+
+    <!-- PANTALLA 4: SOBRE DE CARTA (Desktop - 4) -->
+    <section id="desktop-4" class="screen hidden red-bg">
+        <div class="envelope-card">
+            <h2 class="envelope-title">Feliz cumpleaños<br>Cariño!</h2>
+            <img src="sobre de carta.jpg" alt="Sobre con sello de cera" class="envelope-img">
+            <p class="envelope-sub">Espero te guste mucho</p>
+            <button class="open-btn" onclick="nextScreen('desktop-5')">Abrir</button>
+        </div>
+    </section>
+
+    <!-- PANTALLA 5: FOTO Y BOTÓN LEER CARTA (Desktop - 5) -->
+    <section id="desktop-5" class="screen hidden">
+        <img src="foto EyL.jpeg" class="bg-photo" alt="Foto de fondo">
+        <div class="overlay-content">
+            <p class="date-header-p5">24 - 10 - 06</p>
+            <h1 class="title-darling">Happy birthday darling</h1>
+            <p class="sub-darling">Hoy es un día especial para ti mi vida y quiero que sepas que eres lo mejor que me ha pasado</p>
+            
+            <button class="read-letter-btn" onclick="nextScreen('desktop-6')">Leer carta</button>
+        </div>
+    </section>
+
+    <!-- PANTALLA 6: CARTA Y COLLAGE (Desktop - 6) -->
+    <section id="desktop-6" class="screen hidden red-bg">
+        <div class="letter-layout">
+            <div class="letter-paper">
+                <div class="letter-body">
+                    <p>FELIZ CUMPLEAÑOS MI NIÑO TIQUITITO, ESTE AÑO MI REGALO ES DIFERENTE Y AUNQUE NO ES MUCHO COMO HUBIESE QUERIDO ESTOY HACIENDO MI ESFUERZO POR DARTE ALGO QUE RECORDARAS Y PODRAS ABRIR CUANTAS VECES SEA NECESARIO, MI AMOR ERES UNA GRAN PERSONA Y UN HOMBRE MARAVILLOSO AGRADEZCO MUCHO TENERTE EN MI VIDA, TE DESEO LO MEJOR DEL MUNDO MI NIÑO PORQUE SE QUE PUEDES LOGRAR MUCHISIMAS COSAS Y ESTARE AHI PARA ACOMPAÑARTE Y MOTIVARTE EN CADA UNA DE ELLAS, CONFIO EN EL GRAN POTENCIAL QUE TIENES Y ANHELO COMPARTIR UNA VIDA CONTIGO. ESPERO TE GUSTE MI REGALO JIJI TRATE DE HACER LO MEJOR QUE PUDE, TE QUIERO RECORDAR QUE TE AMO CON TODO MI CORAZON Y SIEMPRE QUE LO NECESITES ESTARE AQUI PARA APOYARTE EN TODO MI AMOR, EN LO BUENO Y EN LO MALO, DOY GRACIAS A DIOS POR OTRO AÑO MAS QUE TE PERMITE ESTAR CON VIDA, VAMOS A PASARLA GENIAL CARIÑO NO SOLO EN ESTE AÑO SI NO EN TODOS LOS QUE VIENEN!!!</p>
+                    <br>
+                    <p><strong>FELICES TWENTYYSSSS MI AMOOORR!!!!</strong></p>
+                    <br><br>
+                    <p>CON MUCHO AMOR Y CARIÑO TU NOVIA<br>Y MEJOR AMIGA,<br><br><strong>LLUVI.</strong></p>
+                </div>
+
+                <img src="decor pantalla 6.5.png" alt="Spiderman con cámara" class="spidey-camera">
+            </div>
+
+            <div class="collage-container">
+                <img src="Group 1.png" alt="Collage de fotos" class="collage-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 7: PASTEL INTERACTIVO Y FUEGOS ARTIFICIALES (Desktop - 7) -->
+    <section id="desktop-7" class="screen hidden black-bg">
+        <canvas id="fireworks-canvas"></canvas>
+
+        <img src="spiderman pantalla 7 1.png" class="spidey-decor-p7" alt="Decoración Spiderman">
+
+        <div class="cake-screen-container">
+            <div id="countdown-banner" class="countdown-banner">
+                <p id="countdown-text">¡PIDE UN DESEO Y SOPLA!</p>
+            </div>
+
+            <div class="cake-wrapper">
+                <div class="candle-container">
+                    <div id="flame" class="flame-animated"></div>
+                    <div class="candle-number">20</div>
+                </div>
+
+                <div class="cake-tier top-tier">
+                    <div class="web-line"></div>
+                </div>
+                <div class="cake-tier bottom-tier">
+                    <div class="web-line"></div>
+                </div>
+                <div class="cake-plate"></div>
+            </div>
+
+            <button id="blow-btn" class="blow-btn" onclick="startCakeCountdown()">Soplar Vela 🕯️</button>
+        </div>
+    </section>
+
+    <!-- CONEXIÓN DEL SCRIPT DE JAVASCRIPT Y CIERRE DEL BODY -->
+    <script src="script.js"></script>
+</body>
+</html>
